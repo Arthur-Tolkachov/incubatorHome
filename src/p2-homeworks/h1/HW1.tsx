@@ -1,9 +1,17 @@
 import React from "react";
+import Message from "./Message";
 
-const messageData = {
-    avatar: "https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg",
-    name: "Some Name",
-    message: "some text",
+export type TaskType = {
+    avatar: string
+    name: string
+    message: string
+    time: string
+}
+
+const messageData: TaskType = {
+    avatar: "https://www.vikids.ru/images/default_avatar.png?avatar_cached_at=1562752082",
+    name: "Ivan",
+    message: "hello hello hello hello hello",
     time: "22:00",
 };
 
@@ -13,14 +21,12 @@ function HW1() {
             <hr/>
             homeworks 1
 
-            {/*should work (должно работать)*/}
-
-            {/*<Message*/}
-            {/*    avatar={messageData.avatar}*/}
-            {/*    name={messageData.name}*/}
-            {/*    message={messageData.message}*/}
-            {/*    time={messageData.time}*/}
-            {/*/>*/}
+            <Message
+                avatar={messageData.avatar}
+                name={messageData.name}
+                message={messageData.message}
+                time={messageData.time}
+            />
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
