@@ -1,3 +1,40 @@
-.someClass {
+.wrapper {
+    background-color: #222b48;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
 
+.buttonsWrapper {
+    display: flex;
+}
+
+.buttonsWrapper button {
+    width: 25%;
+    height: 50px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.allBtn {
+    background-color: #3a994e;
+}
+
+.highBtn {
+    background-color: #993a3a;
+}
+
+.middleBtn {
+    background-color: #99603a;
+}
+
+.lowBtn {
+    background-color: #99973a;
+}
+.buttonsWrapper button:hover {
+    opacity: .9;
 }
