@@ -6,12 +6,13 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
-    const error = text ? "" : "error";
+    const error = text ? "" : "заполните поле";
     const showAlert = () => {
         if (error) {
             alert("введите текст...");
         } else {
             alert(text); // если нет ошибки показать текст
+            setText("")
         }
     }
 
@@ -30,27 +31,35 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    placeholder="Введите текст"
+                    className={`${s.textInput} ${s.blue}`} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
+                    className={s.deleteButton}
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 {/*should work (должно работать)*/}
-                <SuperCheckbox
-                    checked={checked}
-                    onChangeChecked={setChecked}
-                >
-                    some text {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
+                <div className={s.checkBoxWr}>
+                    <SuperCheckbox
+                        checked={checked}
+                        onChangeChecked={setChecked}
+                        className={s.checkbox}
+                    >
+                        запомнить меня {/*// этот текст попадёт в children*/}
+                    </SuperCheckbox>
 
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                    {/*// onChange тоже должен работать*/}
+                    <SuperCheckbox checked={checked}
+                                   onChange={testOnChange}
+                                   className={s.checkbox}
+                    />
+                </div>
             </div>
 
             <hr/>

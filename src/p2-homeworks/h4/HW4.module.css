@@ -1,9 +1,21 @@
 .blue {
-    border-bottom: 5px solid blue;
+    border-bottom-color: blue;
 }
-
+.textInput {
+    width: 100%;
+}
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 20px auto;
+    width: 30%;
+}
+.deleteButton {
+    width: 100%;
+    margin-top: 20px;
+}
+.checkBoxWr {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }

@@ -3,6 +3,7 @@
     margin-bottom: 10px;
     position: relative;
 }
+
 .name {
     color: #fff;
     display: flex;
@@ -10,10 +11,12 @@
     width: 100%;
     background-color: #2d3751;
 }
+
 .name span {
     padding: 10px;
     text-transform: capitalize;
 }
+
 .button {
     cursor: pointer;
     position: absolute;
@@ -30,9 +33,16 @@
     opacity: 0;
     transition: all .2s ease-out;
 }
+
 .button:active {
     background-color: rgba(255, 0, 0, .3);
 }
+
 .button:hover {
     opacity: 1;
+}
+
+.name .priority {
+    font-size: 12px;
+    text-transform: lowercase;
 }
