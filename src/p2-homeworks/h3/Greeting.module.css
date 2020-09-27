@@ -1,9 +1,10 @@
 .wrapper {
-    background-color: #2d3751;
+    background-color: #41a5fd;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     display: flex;
+    width: 100%;
 }
 
 .input {
@@ -60,7 +61,7 @@
     position: absolute;
     right: -10px;
     top: -10px;
-    border: 2px solid #000;
+    border: 2px solid #2d3751;
 }
 
 
@@ -93,7 +94,7 @@
     font-size: 14px;
 }
 .userDataContent {
-    color: #000;
+    color: #2d3751;
     font-size: 20px;
 }
 .userData:last-child .userDataContent {

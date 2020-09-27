@@ -1,9 +1,8 @@
 .wrapper {
-    background-color: #222b48;
-    padding: 20px;
-    margin: 20px;
+    background-color: #41a5fd;
     border-radius: 10px;
-    width: 400px;
+    width: 50%;
+    overflow: hidden;
 }
 
 .buttonsWrapper {

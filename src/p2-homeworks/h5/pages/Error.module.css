@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #73cdff;
+}
+
+.wrapper span {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.wrapper span:first-child {
+    font-size: 200px;
+}
+
+.wrapper span:last-child {
+    font-size: 100px;
+}
+.wrapper span.hands {
+    font-size: 100px;
+    display: inline-block;
+}
+
+.wrapper span.hands:first-child {
+    -webkit-animation: handL 3s ease infinite;
+    -o-animation: handL 3s ease infinite;
+    animation: handL 3s ease infinite;
+    transform-origin: bottom;
+}
+.wrapper span.hands:last-child {
+    -webkit-animation: handR 3s ease infinite;
+    -o-animation: handR 3s ease infinite;
+    animation: handR 3s ease infinite;
+    transform-origin: bottom;
+}
+
+@keyframes handL {
+    from {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes handR {
+    from {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}

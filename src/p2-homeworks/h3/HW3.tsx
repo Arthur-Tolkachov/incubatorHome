@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
+import Title from "../h4/common/Title/Title";
 
 // types
 export type UserType = {
@@ -16,18 +17,13 @@ function HW3() {
     }
 
     return (
-        <div>
-            <hr/>
-            homeworks 3
+        <section>
+            <Title title="homeworks 3" count="1"/>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
-            <hr/>
-        </div>
+        </section>
     );
 }
 
