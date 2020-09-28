@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #138af3;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
     padding: 20px;
     border-bottom: 1px solid #fff;
     font-size: 20px;
@@ -58,7 +58,7 @@
     vertical-align: middle;
     line-height: 88px;
     transform: translateY(-30px);
-    transition: all .3s cubic-bezier(.16,0,.81,1.95);
+    transition: all .3s linear;
     opacity: 0;
 }
 .button:hover::after {
@@ -88,12 +88,15 @@
 
 .name .priority.high {
     background-color: #ff0000;
+    opacity: .5;
 }
 
 .name .priority.middle {
     background-color: #ff5100;
+    opacity: .5;
 }
 
 .name .priority.low {
     background-color: #ffc600;
+    opacity: .5;
 }

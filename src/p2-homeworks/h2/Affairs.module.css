@@ -1,6 +1,5 @@
 .wrapper {
-    background-color: #41a5fd;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 50%;
     overflow: hidden;
 }
@@ -20,20 +19,37 @@
 }
 
 .allBtn {
-    background-color: #3a994e;
+    background-color: rgba(58, 153, 78, .7);
 }
 
 .highBtn {
-    background-color: #993a3a;
+    background-color: rgba(153, 58, 58, .7);
 }
 
 .middleBtn {
-    background-color: #99603a;
+    background-color: rgba(153, 96, 58, .7);
 }
 
 .lowBtn {
-    background-color: #99973a;
+    background-color: rgba(153, 151, 58, .7);
 }
-.buttonsWrapper button:hover {
-    opacity: .9;
+
+.buttonsWrapper button {
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonsWrapper button::after {
+    content: "";
+    width: 400%;
+    height: 200px;
+    position: absolute;
+    left: -400%;
+    top: -50px;
+    background: linear-gradient(160deg, rgba(2, 0, 36, 0) 20%, rgba(255, 255, 255, .2) 50%, rgba(0, 212, 255, 0) 80%);
+}
+
+.buttonsWrapper button:hover::after {
+    transform: translateX(300%);
+    transition: all 1s linear;
 }

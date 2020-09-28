@@ -1,0 +1,170 @@
+span.textField {
+    font-size: 16px;
+    margin: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+}
+.icon {
+    width: 250px;
+}
+.inputWr {
+    width: calc(100% - 800px);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    padding: 20px;
+    border-radius: 50px;
+}
+.buttonsWr {
+    width: 250px;
+    text-align: center;
+}
+.mouseWr {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: .3;
+}
+.mouseWr::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    border-bottom: 1px dashed #fff;
+}
+
+.mouse {
+    width: 50px;
+    height: 80px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.mouseButtons {
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+}
+
+.mouseButtons div {
+    width: 50%;
+    position: relative;
+}
+
+.leftBtn {
+    width: 50%;
+    border-radius: 20px 0 0 0;
+    border-right: 1px solid #fff;
+    -webkit-animation: doubleClick 1.5s linear infinite;
+    -o-animation: doubleClick 1.5s linear infinite;
+    animation: doubleClick 1.5s linear infinite;
+}
+.leftBtn::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-radius: 30px 0 0 0;
+}
+.rightBtn::after {
+    content: "";
+    width: 9px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    bottom: 0;
+    background-color: #fff;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.saveBtn {
+    width: 100px;
+    height: 100px;
+    background-color: #41a5fd;
+    color: #fff;
+    border-radius: 50% 0 0 50%;
+    font-size: 16px;
+    position: relative;
+    margin-left: 50px;
+}
+.saveBtn::after {
+    content: "";
+    width: 1px;
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #fff;
+}
+.restoreBtn {
+    width: 100px;
+    height: 100px;
+    background-color: #41a5fd;
+    color: #fff;
+    border-radius: 0 50% 50% 0;
+    font-size: 16px;
+}
+.saveBtn:hover,
+.restoreBtn:hover {
+    background-color: #5db0f8;
+}
+.saveBtn:active,
+.restoreBtn:active {
+    background-color: #1491ff;
+    transform: scale(.98);
+}
+
+input.textField {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, .5);
+}
+@keyframes doubleClick {
+    from {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    39% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    40% {
+        background-color: rgba(255, 255, 255, .9);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    60% {
+        background-color: rgba(255, 255, 255, .9);
+    }
+    61% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+}
+

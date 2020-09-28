@@ -26,23 +26,25 @@ function HW4() {
 
             <div className={s.column}>
                 {/*should work (должно работать)*/}
-                <SuperInputText
-                    value={text}
-                    onChangeText={setText}
-                    onEnter={showAlert}
-                    error={error}
-                    placeholder="Введите текст"
-                    className={`${s.textInput} ${s.blue}`} // проверьте, рабоет ли смешивание классов
-                />
+                <div className={s.wrapper}>
+                    <SuperInputText
+                        value={text}
+                        onChangeText={setText}
+                        onEnter={showAlert}
+                        error={error}
+                        placeholder="Введите текст"
+                        className={`${s.textInput} ${s.blue}`} // проверьте, рабоет ли смешивание классов
+                    />
 
-                {/*should work (должно работать)*/}
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
-                    className={s.deleteButton}
-                >
-                    delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
+                    {/*should work (должно работать)*/}
+                    <SuperButton
+                        red // пропсу с булевым значением не обязательно указывать true
+                        onClick={showAlert}
+                        className={s.deleteButton}
+                    >
+                        delite{/*// название кнопки попадёт в children*/}
+                    </SuperButton>
+                </div>
 
                 {/*should work (должно работать)*/}
                 <div className={s.checkBoxWr}>

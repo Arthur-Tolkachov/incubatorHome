@@ -1,8 +1,8 @@
 .wrapper {
-    background-color: #41a5fd;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
     padding: 20px;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     display: flex;
     width: 100%;
 }
@@ -14,6 +14,7 @@
     align-items: flex-start;
     position: relative;
 }
+
 .input input {
     width: 100%;
     height: 50px;
@@ -22,46 +23,65 @@
     background-color: rgba(255, 255, 255, .2);
     color: #fff;
     font-size: 18px;
+    border-radius: 50px 0 0 50px;
 }
+
 .input input::placeholder {
     color: #fff;
 }
+
 .input input:focus::placeholder {
     color: transparent;
 }
+
 .input button {
     width: 100px;
     height: 50px;
     font-size: 18px;
-    background-color: #3a994e;
+    background-color: rgba(58, 153, 78, .7);
     border: none;
     cursor: pointer;
     color: #fff;
     text-transform: uppercase;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    overflow: hidden;
 }
-.input button:hover {
-    background-color: #46a95b;
+
+.input button::after {
+    content: "";
+    width: 400%;
+    height: 200px;
+    position: absolute;
+    left: -400%;
+    top: -50px;
+    background: linear-gradient(160deg, rgba(2, 0, 36, 0) 20%, rgba(255, 255, 255, .2) 50%, rgba(0, 212, 255, 0) 80%);
 }
 .input button:active {
-    background-color: #266433;
+    background-color: rgba(58, 153, 78, 1);
+    transform: scale(.96);
 }
+.input button:hover::after {
+    transform: translateX(300%);
+    transition: all 1s linear;
+}
+
 
 .totalCount {
     display: block;
     width: 30px;
     height: 30px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .7);
     margin-left: 20px;
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    line-height: 26px;
+    line-height: 27px;
     font-size: 20px;
     font-weight: 600;
     position: absolute;
     right: -10px;
     top: -10px;
-    border: 2px solid #2d3751;
 }
 
 
@@ -69,7 +89,9 @@
     width: 60%;
     background-color: rgba(255, 255, 255, .3);
     padding: 20px;
+    border-radius: 20px;
 }
+
 .data h5 {
     margin: 10px 0;
     color: #fff;
@@ -77,38 +99,45 @@
     font-size: 20px;
 }
 
-.usersWr{
+.usersWr {
     width: 100%;
     border-bottom: 1px solid #fff;
     display: flex;
 }
+
 .userData {
     width: 50%;
     background-color: rgba(255, 255, 255, .2);
     padding: 10px;
 }
+
 .userDataTitle {
     display: inline-block;
     margin-right: 20px;
     color: #fff;
     font-size: 14px;
 }
+
 .userDataContent {
     color: #2d3751;
     font-size: 20px;
 }
+
 .userData:last-child .userDataContent {
     text-transform: capitalize;
 }
+
 .input .error {
-    border: 1px solid red;
+    border: 1px solid rgba(153, 58, 58, .7);
 }
+
 .errorType {
     position: absolute;
-    color: #f00;
+    color: rgba(153, 58, 58, .7);
     bottom: -22px;
     left: 0;
 }
+
 .label {
     position: relative;
     width: 100%;

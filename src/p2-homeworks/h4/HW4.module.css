@@ -1,25 +1,40 @@
 .blue {
-    border-bottom-color: blue;
+    border-bottom-color: rgba(65, 65, 255, .7);
 }
+
 .textInput {
     width: 100%;
-    background-color: transparent;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 0 80px 0 20px;
 }
+
 .textInput::placeholder {
     color: #fff;
 }
+
 .column {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
     width: 30%;
 }
-.deleteButton {
-    width: 100%;
-    margin-top: 20px;
+.wrapper {
+    position: relative;
 }
+.deleteButton {
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    margin-top: 20px;
+    position: absolute;
+    top: -19px;
+    right: 1px;
+}
+
 .checkBoxWr {
     margin-top: 20px;
     display: flex;

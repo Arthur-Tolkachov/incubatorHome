@@ -10,6 +10,6 @@
 }
 
 .red {
-    background: #993a3a;
+    background: rgba(153, 58, 58, .7);
     color: #fff;
 }

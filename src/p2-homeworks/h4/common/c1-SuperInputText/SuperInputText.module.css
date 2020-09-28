@@ -7,8 +7,9 @@
 }
 
 .superInput.errorInput {
-    border-color: red;
+    border-color: rgba(153, 58, 58, 1);
 }
+
 .superLabel {
     position: absolute;
     left: 0;
@@ -17,8 +18,9 @@
 }
 
 .error {
-    color: red;
+    color: rgba(153, 58, 58, 1);
 }
+
 .label {
     position: relative;
     display: block;

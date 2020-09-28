@@ -16,8 +16,8 @@
 }
 .message {
     margin-left: 10px;
-    background-color: #41a5fd;
-    border-radius: 5px 5px 5px 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    border-radius: 20px 20px 20px 0;
     width: calc(100% - 50px);
     color: #4a5c98;
     padding: 25px 55px 25px 15px;
@@ -30,8 +30,8 @@
     left: -20px;
     bottom: 0;
     border: 10px solid transparent;
-    border-right-color: #41a5fd;
-    border-bottom-color: #41a5fd;
+    border-right-color: rgba(255, 255, 255, .2);
+    border-bottom-color: rgba(255, 255, 255, .2);
 }
 .message::after {
     content: "";
