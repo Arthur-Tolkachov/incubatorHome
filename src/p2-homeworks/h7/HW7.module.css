@@ -1,0 +1,25 @@
+.select > span {
+    width: 300px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px 10px 20px;
+    appearance: none;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+}
+.select ul {
+    border: none;
+    background-color: #73cdff;
+}
+.select ul li {
+    padding: 10px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.select ul li:hover {
+    background-color: rgba(255, 255, 255, .5);
+}

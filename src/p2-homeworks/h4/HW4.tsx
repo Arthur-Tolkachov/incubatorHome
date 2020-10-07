@@ -42,7 +42,7 @@ function HW4() {
                         onClick={showAlert}
                         className={s.deleteButton}
                     >
-                        delite{/*// название кнопки попадёт в children*/}
+                        delete{/*// название кнопки попадёт в children*/}
                     </SuperButton>
                 </div>
 

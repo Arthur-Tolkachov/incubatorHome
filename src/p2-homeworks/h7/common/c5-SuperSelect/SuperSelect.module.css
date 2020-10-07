@@ -1,0 +1,38 @@
+.select {
+    display: none;
+}
+.customSelect {
+    display: inline-block;
+}
+.currentItem {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 10px 30px 10px 10px;
+    position: relative;
+}
+.arrow {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+}
+.listWr {
+    position: relative;
+}
+.list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
