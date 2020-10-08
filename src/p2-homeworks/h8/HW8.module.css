@@ -1,0 +1,57 @@
+.wrapper {
+    width: 90%;
+}
+.item {
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    padding: 20px;
+    width: calc(20% - 10px);
+    height: 200px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 5px 20px;
+}
+.age {
+    color: #fff;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    text-align: center;
+    line-height: 96px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+.people {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.buttons {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    margin: 0 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: all .2s ease;
+}
+.btn:hover {
+    transform: scale(1.1);
+}

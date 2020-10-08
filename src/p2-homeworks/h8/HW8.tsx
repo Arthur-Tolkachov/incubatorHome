@@ -1,8 +1,16 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import Title from "../h4/common/Title/Title";
+import s from './HW8.module.css';
 
-const initialPeople = [
+export type initialPeopleType = {
+    _id: number
+    name: string
+    age: number
+}
+
+const initialPeople: Array<initialPeopleType> = [
     {_id: 0, name: "Кот", age: 3},
     {_id: 1, name: "Александр", age: 66},
     {_id: 2, name: "Коля", age: 16},
@@ -12,34 +20,42 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState(initialPeople);
+    const [people, setPeople] = useState <Array<initialPeopleType>>(initialPeople);
 
-    const finalPeople = people.map(p => (
-        <div key={p._id}>
-            some name, age
+    const finalPeople: Array<JSX.Element> = people.map(p => (
+        <div className={s.item} key={p._id}>
+            <div className={s.name}>{p.name}</div>
+            <div className={s.age}>{p.age}</div>
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "SORT_UP", payload: "up"}))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: "SORT_DOWN", payload: "down"}))
+    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: "CHECK18", payload: 18}))
 
     return (
-        <div>
-            <hr/>
-            homeworks 8
+        <section>
+            <Title title=" homeworks 8" count="1"/>
+
 
             {/*should work (должно работать)*/}
 
-            {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
+            <div className={s.wrapper}>
+                <div className={s.people}>
+                    {finalPeople}
+                </div>
 
-            check 18
+                <div className={s.buttons}>
+                    <SuperButton className={s.btn} onClick={sortUp}>sort up</SuperButton>
+                    <SuperButton className={s.btn} onClick={sortDown}>sort down</SuperButton>
+                    <SuperButton className={s.btn} onClick={check18}>check 18</SuperButton>
+                </div>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
-        </div>
+
+            </div>
+
+
+        </section>
     );
 }
 
