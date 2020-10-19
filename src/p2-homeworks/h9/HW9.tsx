@@ -1,20 +1,16 @@
 import React from "react";
 import Clock from "./Clock";
+import Title from "../h4/common/Title/Title";
 
 function HW9() {
     return (
-        <div>
-            <hr/>
-            homeworks 9
+        <section>
+            <Title title=" homeworks 9" count="2"/>
 
             {/*should work (должно работать)*/}
             <Clock/>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeClock/>*/}
-            <hr/>
-        </div>
+        </section>
     );
 }
 

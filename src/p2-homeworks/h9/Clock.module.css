@@ -1,0 +1,89 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.timer {
+    font-size: 150px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .5);
+    position: relative;
+    background-color: rgba(255, 255, 255, .3);
+    cursor: default;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-right: -25px;
+}
+
+.timer::before {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 50px;
+}
+
+.timer::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 50px;
+}
+
+.date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    top: 280px;
+    font-size: 30px;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.date.show {
+    opacity: 1;
+    top: 150px;
+    transform: translateX(-50%) scale(1.1);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: -25px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, .2);
+    transition: all .2s ease;
+}
+
+.buttons:hover {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, .1);
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.green {
+    background-color: #3a994e;
+}
+
+.red {
+    background-color: #993a3a;
+}
