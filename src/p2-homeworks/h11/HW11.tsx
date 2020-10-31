@@ -23,6 +23,7 @@ function HW11() {
                 <div>
                     <span>{value1}</span>
                     <SuperRange
+                        value={value1}
                         onChangeRange={setValue1}
                     />
                 </div>
