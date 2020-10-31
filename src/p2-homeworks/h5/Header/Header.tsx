@@ -3,7 +3,6 @@ import {PATH} from "../Routes";
 import { NavLink } from "react-router-dom";
 import s from "./Header.module.css";
 import menuIcon from "../../../assets/menu.png"
-import Clock from "./Clock/Clock";
 
 
 function Header() {
@@ -14,7 +13,6 @@ function Header() {
             </div>
             <NavLink to={PATH.PRE_JUNIOR}><span>Вайтишник</span></NavLink>
             <NavLink to={PATH.JUNIOR}><span>Джуниор</span></NavLink>
-            <Clock/>
         </nav>
     );
 }

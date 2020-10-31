@@ -15,10 +15,11 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false);
 
     const stop = () => {
-        clearInterval(timerId)
+        clearTimeout(timerId)
     }
 
     const start = () => {
+        stop()
         const id: number = window.setInterval(() => {
             setDate(new Date())
         }, 1000);
@@ -33,7 +34,7 @@ function Clock() {
     };
 
     let dd = date.getDate()
-    let mm = date.getMonth()
+    let mm = date.getMonth() + 1
     let yy = date.getFullYear()
 
     let h = date.getHours()
@@ -121,10 +122,6 @@ function Clock() {
             backgroundColor: "rgba(255, 255, 255, .5)",
             borderRadius: "50%"
         }
-    }
-
-    const bgc = {
-
     }
 
 
