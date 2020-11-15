@@ -1,23 +1,61 @@
+.default {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    padding: 50px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    transition: all 1s ease;
+}
+.radio {
+    display: flex;
+    align-items: center;
+}
+
+.radio input {
+    margin-right: 5px;
+}
+
+.switcher {
+    position: absolute;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    border-radius: 20px;
+    left: 20px;
+    top: 50%;
+    margin-top: -60px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.switcher::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 200px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .3);
+}
 .dark {
-    background: dimgrey;
+    background-color: #18506f!important;
 }
 
 .dark-text {
-    color: aliceblue;
+    background: linear-gradient(135deg, rgba(25, 54, 70, .1) 0%, rgba(25, 54, 70, .2) 50%,  rgba(25, 54, 70, .3) 70%, rgba(25, 54, 70, .1) 100%)!important;
+    color: rgba(25, 54, 70, 1);
 }
 
 .red {
-    background: lightcoral;
+    background: #6d3232!important;
 }
 
 .red-text {
-    color: aqua;
-}
-
-.some {
-    background: lightgreen;
-}
-
-.some-text {
-    color: darkslateblue;
+    background: linear-gradient(135deg, rgba(76, 27, 27, .5) 0%, rgba(76, 27, 27, .6) 50%,  rgba(76, 27, 27, .7) 70%, rgba(76, 27, 27, .5) 100%)!important;
+    color: #993a3a;
 }

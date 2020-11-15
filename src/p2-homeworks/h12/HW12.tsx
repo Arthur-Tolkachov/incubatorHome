@@ -1,25 +1,42 @@
-import React from "react";
+import React, {useEffect} from "react";
 import s from "./HW12.module.css";
+import Title from "../h4/common/Title/Title";
+import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
+import {useDispatch, useSelector} from "react-redux";
+import {changeThemeC} from "./bll/themeReducer";
+import {AppStoreType} from "../h10/bll/store";
 
-const themes = ['dark', 'red', 'some'];
+const themes = ['dark', 'red', 'light'];
 
 function HW12() {
-    const theme = 'some'; // useSelector
+    const dispatch = useDispatch()
+    const theme = useSelector<AppStoreType, string>(state => state.theme.theme)
+    useEffect(() => {
+        !theme && dispatch(changeThemeC(themes[2]))
+    }, [theme])
 
-    // useDispatch, onChangeCallback
+    const setTheme = (value:string) => {
+        dispatch(changeThemeC(value))
+    }
 
     return (
-        <div className={s[theme]}>
-            <hr/>
-            <span className={s[theme + '-text']}>
-                homeworks 12
+        <section className={`${theme && s[theme]}`}>
+            <Title title="homeworks 12" count="2"/>
+
+            <span className={`${s.default} ${s[theme + "-text"]}`}>
+                Some text
             </span>
 
             {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
+            <div className={s.switcher}>
+                <SuperRadio name={"theme"}
+                            className={s.radio}
+                            value={theme}
+                            onChangeOption={setTheme}
+                            options={themes}/>
+            </div>
 
-            <hr/>
-        </div>
+        </section>
     );
 }
 
