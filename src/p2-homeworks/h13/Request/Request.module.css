@@ -1,0 +1,17 @@
+.checkbox {
+    margin-top: 20px;
+}
+.btn {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .2s ease;
+}
+.btn:hover {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, .05);
+}

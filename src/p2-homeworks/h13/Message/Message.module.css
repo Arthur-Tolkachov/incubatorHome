@@ -1,0 +1,46 @@
+.message {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 50%,  rgba(255, 255, 255, .3) 70%, rgba(255, 255, 255, .1) 100%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.message::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0f600f;
+    transform-origin: left;
+    animation: message 2.7s linear;
+}
+.message.error::after {
+    background-color: #e01a1a;
+}
+.text {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #0f600f;
+}
+.message.error .text {
+    color: #e01a1a;
+}
+.info {
+    font-size: 14px;
+    margin-top: 10px;
+}
+@keyframes message {
+    0% {
+        transform: scaleX(0)
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+

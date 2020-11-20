@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import SuperRadio from "../p2-homeworks/h7/common/c6-SuperRadio/SuperRadio";
 import s from "../p2-homeworks/h12/HW12.module.css";
 import {action} from "@storybook/addon-actions";
